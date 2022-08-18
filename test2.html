@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        body{
+            line-height:2em;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            margin:150px;
+        }   
+        ul, li{
+            list-style:none;
+            text-align:center;
+            padding:0;
+            margin:0;
+        }
+
+        #mainWrapper{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        #mainWrapper > ul > li:first-child{
+            text-align: center;
+            font-size:14pt;
+            height:40px;
+            vertical-align: middle;
+            line-height: 30px;
+        }
+
+        #ulTable > li:first-child > ul > li {
+            background-color: aliceblue;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        #ulTable > li > ul > li:first-child {width:10%}
+        #ulTable > li > ul > li:first-child + li {width: 45%;}
+        #ulTable > li > ul > li:first-child + li + li {width: 20%}
+        #ulTable > li > ul > li:first-child + li + li + li {width:15%}
+        #ulTable > li > ul > li:first-child + li + li + li + li {width:10%}
+
+        #divPaging {
+            clear:both;
+            margin:0 auto;
+            width:220px;
+            height:50px;
+        }
+
+        #divPaging > div{
+            float:left;
+            width: 30px;
+            margin:0 auto;
+            text-align:center;
+        }
+
+        #liSearchOption {clear:both;}
+        #liSearchOption > div {
+            margin:0 auto;
+            margin-top: 30px;
+            width:auto;
+            height:100px;
+        }
+
+        .left{
+            text-align : left;
+        }
+    </style>
+<meta charset="UTF-16">
+<title>JavaScript Alert Example</title>
+</head>
+<body>
+<form id="myform">
+    <p>input the text : <input type="text" id="txt"></p>
+
+    <p>input password : <input type="password" id="pw"></p>
+
+    <input type="checkbox" name="ck" value="phone">phone
+    <input type="checkbox" name="ck" value="computer">computer<br>
+
+    <label for="mail">Male</label>
+    <input type="radio" name="gender" id="mail" value="male">
+    <label for="female">Femail</label>
+    <input type="radio" name="gender" id="female" value="female">
+
+    <p>select color : <input type="color" id="c"></p>
+
+    <p>birthday : <input type="date" id="d"></p>
+
+    <p><input type="range" id="r" mint="0" max="10" value = 5></p>
+
+    <p>Quantity (between 1 and 10) : 
+    <input type = "number" id="num" min="1" max="10" value="1" step="1">
+    </p>
+
+    <select id="selectbox">
+        <option value="select1">seclect1</option>>
+        <option value="select2">seclect2</option>>
+        <option value="select3">seclect3</option>>
+        <option value="select4">seclect4</option>>
+    </select>
+
+    <textarea id="textarea" clos="10" rows="5">
+    </textarea>
+    <p>
+
+    
+    <input type="submit" value="submit" onclick="printdata()">
+    </p>
+    <li>게시판 Title</li>
+    <li>
+        Table
+        <ul id ="ulTable">
+            <li>
+                <ul>
+                    <li>No</li>
+                    <li>제목</li>
+                    <li>작성일</li>
+                    <li>작성자</li>
+                    <li>조회수</li>
+                </ul>
+            </li>    
+
+            <li>
+                <ul>
+                    <li>2</li>
+                    <li class="left">제목</li>
+                    <li>2014.07.09</li>
+                    <li>자바킹</li>
+                    <li>0</li>
+                </ul>    
+            </li>
+    </li>
+
+    <li id='liSearchOption'>
+        <div>
+            <select id = 'selSearchOption'>
+                <option value='A'>제목 + 내용</option>
+                <option value='T'>제목</option>
+                <option value='C'>내용</option>                
+            </select>
+            <input id='txtKeyWord' />
+            <input type='button' value='검색'/>
+            </div>
+</form>
+</body>
+</html>
